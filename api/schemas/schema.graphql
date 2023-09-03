@@ -1,0 +1,7 @@
+
+
+
+type Query{
+    user:UserOutput
+    userById(id:Int!):UserOutput
+}

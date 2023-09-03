@@ -1,21 +1,14 @@
 from fastapi import FastAPI
-from fastapi.routing import BaseRoute, APIRoute, APIRouter, Route, Mount
-from fastapi.responses import JSONResponse
+import api.config as config
+from api.routers.v1.GraphqlRouter import GraphqlRouter
+from api.schemas.graphql_schemas import graphql
 
-    
-    
-ROUTES = [
-    # Route(
-    #     "/",
-    #     endpoint=root,
-    # ),
-]
+app = FastAPI()
+ROUTE_PREFIX = f"/api/{config.API_VERSION}"
 
-app = FastAPI(
-    routes=Mount(
-        path="/api/v1",
-        routes=ROUTES,
-    )
+app.include_router(
+    router=GraphqlRouter,
+    prefix=ROUTE_PREFIX
 )
 
 # @app.get("/")

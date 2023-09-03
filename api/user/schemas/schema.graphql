@@ -1,0 +1,16 @@
+type User{
+    id: Int!
+    name: String!
+    email: String!
+    password: String!
+}
+
+type UserOutput{
+    id: Int!
+    name: String!
+    email: String!
+}
+
+input UserByIdInput{
+    id: Int!
+}
