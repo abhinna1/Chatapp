@@ -8,7 +8,7 @@ GraphqlRouter = APIRouter(
 )
 
 @GraphqlRouter.get("/")
-def graphql_route():
-    return graphql.handle_request()
+async def graphql_route(request: Request):
+    return await graphql.handle_request(request)
 
 # GraphqlRouter.
