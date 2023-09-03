@@ -10,5 +10,3 @@ app.include_router(
     router=GraphqlRouter,
     prefix=ROUTE_PREFIX
 )
-
-# @app.get("/")

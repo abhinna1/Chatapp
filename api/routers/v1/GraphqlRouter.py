@@ -11,4 +11,10 @@ GraphqlRouter = APIRouter(
 async def graphql_route(request: Request):
     return await graphql.handle_request(request)
 
+@GraphqlRouter.post("/")
+async def handle_graphql_query(
+    request: Request,
+):
+    return await graphql.handle_request(request)
+
 # GraphqlRouter.
