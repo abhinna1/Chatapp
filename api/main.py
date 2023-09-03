@@ -5,10 +5,10 @@ from fastapi.responses import JSONResponse
     
     
 ROUTES = [
-    Route(
-        "/",
-        endpoint=root,
-    ),
+    # Route(
+    #     "/",
+    #     endpoint=root,
+    # ),
 ]
 
 app = FastAPI(
